@@ -1,17 +1,17 @@
 
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+body { margin: 0; padding: 0; } /*Removes browser margins*/
+#map { position: absolute; top: 0; bottom: 0; width: 100%; } /*fits map to full screen*/
 
-#title {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+#title { /* title style for map*/
+    position: absolute; /*places higher than map*/
+    top: 10px; /*margin*/
+    left: 50%; /*center*/
+    transform: translateX(-50%); /* Correct horizontal centering */ 
     background: white;
     padding: 1px 10px;
     border-radius: 8px;
     font-family: Arial, sans-serif;
-    z-index: 1;
+    z-index: 1; /*weight to keep at top*/
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
@@ -27,50 +27,49 @@ body { margin: 0; padding: 0; }
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     font-size: 14px;
     color: white;
-    column-count: 2;       /* <--- split into 2 columns */
+/* split into 2 columns */
+    column-count: 2;       
     column-gap: 20px;
 }
-
+/*legend rows*/
 #legend div {
-    display: flex;
+    display: flex; /*align text and patch*/
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
 }
-
+/*item patches*/
 #legend span {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 20px; /*patch width*/
+    height: 20px; /*patch height*/
     margin-right: 8px;
 }    
-
+/*OSU logo*/
 #corner-image1 {
-    position: absolute;       /* float on top of the map */
-    bottom: 60px;             /* distance from bottom */
-    right: 2px;              /* distance from right */
-    display: flex;            /* place images side by side */ 
-    z-index: 2;               /* make sure it sits above map */
+    position: absolute;       
+    bottom: 60px;  /* margin */
+    right: 2px;   /* margin */
+    z-index: 2;               
 }
 
 #corner-image1 img {
-    width: 50px;              /* adjust size */
-    height: auto;             /* keep aspect ratio */
-    border-radius: 4px;       /* optional rounded corners */
+    width: 50px;  /* size */
+    height: auto; /* keep aspect ratio */
+    border-radius: 4px;       
     /* box-shadow: 0 1px 4px rgba(0,0,0,0.4); optional shadow */
 }
 
 #corner-image2 {
-    position: absolute;       /* float on top of the map */
-    bottom: 20px;             /* distance from bottom */
-    right: 2px;              /* distance from right */
-    display: flex;            /* place images side by side */  
-    z-index: 2;               /* make sure it sits above map */
+    position: absolute;       
+    bottom: 19px;             
+    right: 2px;               
+    z-index: 2;               
 }
 
 #corner-image2 img {
-    width: 300px;              /* adjust size */
+    width: 300px;             
     height: auto;
-    background: white;             /* keep aspect ratio */
-    border-radius: 4px;       /* optional rounded corners */
-    /* box-shadow: 0 1px 4px rgba(0,0,0,0.4); /* optional shadow */
+    background: white;           
+    /* border-radius: 4px;        */
+    /* box-shadow: 0 1px 4px rgba(0,0,0,0.4);*/
 }
