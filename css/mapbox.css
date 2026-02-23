@@ -1,0 +1,76 @@
+
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+#title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1px 10px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#legend {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-size: 14px;
+    color: white;
+    column-count: 2;       /* <--- split into 2 columns */
+    column-gap: 20px;
+}
+
+#legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}    
+
+#corner-image1 {
+    position: absolute;       /* float on top of the map */
+    bottom: 60px;             /* distance from bottom */
+    right: 2px;              /* distance from right */
+    display: flex;            /* place images side by side */ 
+    z-index: 2;               /* make sure it sits above map */
+}
+
+#corner-image1 img {
+    width: 50px;              /* adjust size */
+    height: auto;             /* keep aspect ratio */
+    border-radius: 4px;       /* optional rounded corners */
+    /* box-shadow: 0 1px 4px rgba(0,0,0,0.4); optional shadow */
+}
+
+#corner-image2 {
+    position: absolute;       /* float on top of the map */
+    bottom: 20px;             /* distance from bottom */
+    right: 2px;              /* distance from right */
+    display: flex;            /* place images side by side */  
+    z-index: 2;               /* make sure it sits above map */
+}
+
+#corner-image2 img {
+    width: 300px;              /* adjust size */
+    height: auto;
+    background: white;             /* keep aspect ratio */
+    border-radius: 4px;       /* optional rounded corners */
+    /* box-shadow: 0 1px 4px rgba(0,0,0,0.4); /* optional shadow */
+}
